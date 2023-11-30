@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="leading-normal tracking-normal text-white">
+    <header class="fixed-top w-full border-gray-200 py-6">
+      <div class="flex items-center justify-between max-w-screen-xl mx-auto">
+        <div class="flex items-center lg:order-4">
+          <a href="login.html" type="submit" class="text-white text-s bg-blue-500 font-medium rounded-lg px-4 lg:px-5 py-2 lg:py-3 lg:mr-0">
+            로그아웃
+          </a>
+        </div>
+        <div class="items-center justify-between lg:w-auto">
+          <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <li>
+              <a href="home.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                홈
+                </a>
+            </li>
+            <li>
+              <a href="analyze.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                분석하기
+                </a>
+            </li>
+            <li>
+              <a href="list.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                취약점 정보
+                </a>
+            </li>
+            <li>
+              <a href="result.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                분석결과
+              </a>
+            </li>
+            <li>
+              <a href="mypage.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                나의정보
+                </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    </body>
+
+    <section class="bg-gray-100">
+        <div class="container mx-auto">
+          <div class="w-full px-6 py-16">
+            <div class="py-10 bg-white shadow-lg">
+          <h1 class="my-4 text-6xl font-bold leading-tight text-center text-gray-800">
+            회원 정보
+          </h1>
+          <h2 class="text-3xl text-gray-800 font-bold mt-6">
+            이메일
+          </h2>
+          <p class="text-gray-600 mt-10">
+            회원 아이디
+            <hr class="mt-12">
+          </p>
+          <h3 class="text-3xl text-gray-800 font-bold mt-6">
+            이름
+          </h3>
+          <p class="text-gray-600 mt-10">
+            회원 이름
+            <hr class="mt-12">
+          </p>
+          <div>
+            <input type="text" name="id" class="bg-gray-50 border mx-auto border-gray-300 text-gray-900 rounded-lg block w-3/5 p-3"placeholder="아이디 입력"/>  
+        </div>
+          <div class="flex items-center justify-center">
+            <button type="submit"class="text-white bg-blue-500 p-3 rounded-lg">
+                아이디 수정
+            </button>
+          </div>
+          <div>
+            <input type="password"name="pw"class="bg-gray-50 border mx-auto border-gray-300 text-gray-900 rounded-lg block w-3/5 p-3"placeholder="현재 비밀번호 입력"/>
+          </div>
+          <div>
+            <input type="password"name="pw"class="bg-gray-50 border mx-auto border-gray-300 text-gray-900 rounded-lg block w-3/5 p-3"placeholder="새로운 비밀번호 입력"/>
+        </div>
+          <div class="flex items-center justify-center">
+            <button type="submit"class="text-white bg-blue-500 p-3 rounded-lg">
+                비밀번호 수정
+            </button>
+          </div>
+          </div>
+        </section>
+          <footer class="bg-gray-300">
+            <div class="container mx-auto ">
+              <div class="flex md:flex-row py-6">
+                <div class="flex-1 text-gray-900">
+                  <a>분석하기</a>
+                </div>
+                <div class="flex-1 text-gray-900">
+                  <a>취약점 정보</a>
+                  <ul class="text-xs">
+                    <li class="pl-2px">
+                      <p class="text-gray-500">웹취약점</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex-1 text-gray-900">
+                  <a>분석결과</a>
+                  <ul class="text-xs ">
+                    <li class="pl-2px">
+                      <p class="text-gray-500">대응방안</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
