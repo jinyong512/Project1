@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="leading-normal tracking-normal text-white">
+    <header class="fixed-top border-gray-200 py-6">
+      <div class="flex items-center justify-between max-w-screen-xl mx-auto">
+        <div class="flex items-center lg:order-4">
+          <a href="login.html"class="text-white text-s bg-blue-500 font-medium rounded-lg px-4 lg:px-5 py-2 lg:py-3 lg:mr-0">
+            로그인
+          </a>
+          <a href="join.html"class="text-white text-s bg-blue-500 font-medium rounded-lg px-4 lg:px-5 py-2 lg:py-3 lg:mr-0">
+            회원가입
+            </a>
+        </div>
+        <div class="items-center justify-between lg:w-auto">
+          <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <li>
+              <a href="home.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                홈
+                </a>
+            </li>
+            <li>
+              <a href="analyze.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                분석하기
+                </a>
+            </li>
+            <li>
+              <a href="list.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                취약점 정보
+                </a>
+            </li>
+            <li>
+              <a href="result.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                분석결과
+              </a>
+            </li>
+            <li>
+              <a href="mypage.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                나의정보
+                </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-gray-100">
+      <div class="container mx-auto">
+        <div class="w-full px-6 py-16">
+          <div class="py-10 bg-white shadow-lg">
+        <h1 class="my-4 text-6xl font-bold leading-tight text-center text-gray-800">
+          취약점 정보
+        </h1>
+        <div class="align-middle">
+          <h2 class="text-3xl text-gray-800 font-bold mt-6 ml-4">
+            Broken access control
+          </h2>
+          <p class="text-gray-600 mt-4 ml-4">
+            Broken Access Control란? 취약한 접근 제어는 인증된 사용자가 수행할 수 있는 것에 대한 제한이 제대로 적용되지 않는 것을 의미합니다.              
+            <hr class="mt-6">
+          </p>
+        </div>
+        <div class="align-middle">
+          <h3 class="text-3xl text-gray-800 font-bold mt-6 ml-4">
+          SQL Injection
+          </h3>
+          <p class="text-gray-600 mt-4 ml-4">
+            코드 인젝션의 한 기법으로, 클라이언트의 입력값을 조작하여 서버의 데이터베이스를 공격할 수 있는 공격 기술을 말합니다. 주로 사용자가 입력한 데이터를 제대로 필터링, 이스케이핑하지 못한 경우 발생합니다.              
+            <hr class="mt-12">
+          </p>
+        </div>
+        <div class="align-middle">
+          <h4 class="text-3xl text-gray-800 font-bold mt-6 ml-4">
+            XSS
+          </h4>
+          <p class="text-gray-600 mt-4 ml-4">
+            악의적인 사용자가 공격하려는 사이트에 스크립트를 넣는 기법을 말합니다. 공격에 성공하면 사이트에 접속한 사용자는 삽입된 코드를 실행하게 되며, 보통 의도치 않은 행동을 수행시키거나 쿠키나 세션 토큰 등의 민감한 정보를 탈취합니다.
+            공격 방법에 따라 Stored XSS와 Reflected XSS로 나뉩니다. Stored XSS는 사이트 게시판이나 댓글, 닉네임 등 스크립트가 서버에 저장되어 실행되는 방식이고, Reflected XSS는 보통 URL 파라미터(특히 GET 방식)에 스크립트를 넣어 서버에 저장하지 않고 그 즉시 스크립트를 만드는 방식입니다. Reflected XSS의 경우 브라우저 자체에서 차단하는 경우가 많아 상대적으로 공격을 성공시키기 어렵습니다.    
+            <hr class="mt-12">
+          </p>
+        </div>
+        <div class="align-middle">
+          <h5 class="text-3xl text-gray-800 font-bold mt-6 ml-4">
+            세션고정
+          </h5>
+          <p class="text-gray-600 mt-4 ml-4">
+            로그인 시 발급받은 세션 ID가 로그인 전/후 모두 동일하게 사용되어 악의적인 사용자가 피해자의 세션을 하이제킹 하여 정상적인 사용자로 위장하여 접근하는 행위입니다.
+            "세션에 대한 만료" 또는 "서로 다른 IP의 동일한 세션"에 대해 취약한 웹 애플리케이션을 운영 중일 경우 서비스를 이용하는 다수의 사용자들이 해당 공격에 노출될 가능성이 존재합니다.              
+            <hr class="mt-12">
+          </p>
+        </div>
+        <div class="align-middle">
+          <h6 class="text-3xl text-gray-800 font-bold mt-6 ml-4">
+            쿠키 변조 취약점
+          </h6>
+          <p class="text-gray-600 mt-4 ml-4">
+            쿠키변조 취약점은 보호되지 않은 쿠키를 사용하여 쿠키 인젝션 등과 같은 쿠키 값 변조를 통한 데이터의 위변조가 가능한 취약점을 의미합니다.
+            사용자정보, 중요정보 등을 쿠키에 담아놓은 경우에 이러한 정보를 해커는 쉽게 탈취할 수 있습니다.              
+            <hr class="mt-12">
+          </p>
+        </div>
+        <div class="align-middle">
+          <h7 class="text-3xl text-gray-800 font-bold mt-6 ml-4">
+            Security Misconfiguration
+          </h7>
+          <p class="text-gray-600 mt-4 ml-4 ">
+            플리케이션을 최초 설치하거나 업데이트할 때 보안성을 고려하지 않은 설정으로 인해 취약점이 발생하는 경우로, 설정과 관련된 모든 부분을 포함하고 있습니다. XXE(XML External Entity) 항목은 애플리케이션의 잘못된 보안 설정으로 인해 발생하는 취약점으로, 이번 개정으로 보안 설정 오류 항목에 병합됐습니다.            
+            <hr class="mt-12">
+          </p>
+        </div>
+        <div class="align-middle">
+          <h8 class="text-3xl text-gray-800 font-bold mt-6 ml-4">
+           불충분한 인증
+          </h8>
+          <p class="text-gray-600 mt-4 ml-4">
+            불충분한 인증은, 민감한 데이터에 취약한 인증 메커니즘이 구현되어 있을 경우 발생하는 취약점 입니다. 인증 기능(로그인, 중요 페이지에 대한 2차 인증 등)은 구현하였으나 추측 가능한 패스워드, 취약한 인증 프로세스로 구현되어 있으면 해커가 이를 우회하여 정보를 탈취 할 수 있는 취약점 입니다.
+            <hr class="mt-12">
+          </p>
+        </div>
+        <div class="align-middle">
+          <h9 class="text-3xl text-gray-800 font-bold mt-6 ml-4">
+            SSRF
+          </h9>
+          <p class="text-gray-600 mt-4 ml-4">
+            서버 측에서 위조된 HTTP 요청을 발생시켜 직접적인 접근이 제한된 서버 내부 자원에 접근하여 외부로 데이터 유출 및 오동작을 유발하는 공격을 SSRF라고 합니다. 공격형태만 보면 위조된 HTTP 요청를 이용한 공격이고 공격자의 공격이 서버 측에서 발현됩니다. SSRF는 접근이 제한된 내부환경에 추가 공격이 가능하기 때문에 공격의 영향도가 높습니다.             
+            <hr class="mt-12">
+          </p>
+        </div>
+        <div class="align-middle">
+          <h10 class="text-3xl text-gray-800 font-bold mt-6 ml-4">
+            약한 문자열
+          </h10>
+          <p class="text-gray-600 mt-4 ml-4">
+            약한 문자열 강도 취약점은 사용자의 이름이나 비밀번호 또는 신용카드 정보 및 암호화 값 등을 자동으로 대입하여 여러 시행착오 후에 맞는 값을 확인하는 취약점 입니다.이러한 취약점은 해커가 인증 값에 단순 조합의 값을 삽입하여 정상적인 인증을 취득하는 행위를 통하여 이루어 집니다.
+            <hr class="mt-12">
+          </p>
+        </div>
+        <div class="align-middle">
+          <h11 class="text-3xl text-gray-800 font-bold mt-6 ml-4">
+            CSRF
+          </h11>
+          <p class="text-gray-600 mt-4 ml-4">
+            CSRF 공격은 웹 어플리케이션 취약점 중 하나로 인터넷 사용자가 자신의 의지와는 무관하게 공격자가 의도한 행위(수정, 삭제, 등록 등)를 특정 웹사이트에 요청하게 만드는 공격입니다.                         
+            <hr class="mt-12">
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  <footer class="bg-gray-300">
+    <div class="container mx-auto">
+      <div class="flex md:flex-row py-6">
+        <div class="flex-1 text-gray-900">
+          <a>분석하기</a>
+        </div>
+        <div class="flex-1 text-gray-900">
+          <a>취약점 정보</a>
+          <ul class="text-xs">
+            <li class="pl-2px">
+              <p class="text-gray-500">웹취약점</p>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1 text-gray-900">
+          <a>분석결과</a>
+          <ul class="text-xs ">
+            <li class="pl-2px">
+              <p class="text-gray-500">대응방안</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

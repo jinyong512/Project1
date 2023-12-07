@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="leading-normal tracking-normal text-white">
+    <header class="fixed-top w-full shadow-lg border-gray-200 py-6">
+        <div class="flex items-center justify-between max-w-screen-xl mx-auto">
+            <div class="flex items-center lg:order-4">
+              <a href="login.html" type="submit" class="text-white text-s bg-blue-500 font-medium rounded-lg px-4 lg:px-5 py-2 lg:py-3 lg:mr-0">
+                로그아웃
+              </a>
+            </div>
+            <div class="items-center justify-between lg:w-auto">
+              <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                <li>
+                  <a href="home.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                    홈
+                    </a>
+                </li>
+                <li>
+                  <a href="analyze.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                    분석하기
+                    </a>
+                </li>
+                <li>
+                  <a href="list.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                    취약점 정보
+                    </a>
+                </li>
+                <li>
+                  <a href="result.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                    분석결과
+                  </a>
+                </li>
+                <li>
+                  <a href="mypage.html"class="block px-4 text-[22px] font-medium text-gray-700">
+                    나의정보
+                    </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </header>
+
+    <section class="bg-gray-100">
+        <div class="container mx-auto">
+          <div class="w-full px-6 py-16">
+            <div class="py-10 bg-white shadow-lg">  
+            <div class="text-center">
+              <h1 class="my-4 text-6xl font-bold leading-tight text-center text-black">
+                  진단 결과
+              </h1>
+                  <div class="px-9 text-justify mt-8 py-2 text-sm">
+                    <p><span class="font-semibold text-black">URL : www.naver.com</span>
+                    </p>
+                    <p>
+                      <span class="font-semibold text-black">5개 항목 취약점 발견</span>
+                    </p>
+                  </div>
+                  <div class="flex flex-col">
+                    <div class="overflow-x-auto mx-0.5">
+                      <div class="py-2 inline-block min-w-full px-8"> 
+                          <table class="min-w-full border-4 border-black">
+                            <thead class="bg-white">
+                              <tr>
+                                <th scope=col class="text-sm font-medium text-black px-5 py-4">
+                                  <span class="font-semibold">취약점 항목</span>
+                                </th>
+                                <th scope=col class="text-sm font-medium text-black px-5 py-4 ">
+                                  <span class="font-semibold">대응 방안</span>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white  page-break">
+                                    <td class="px-6 py-2.5 font-medium text-black">
+                                        SQL Injection
+                                    </td>
+                                    <td class="px-6 py-2.5 font-medium text-black">
+                                        입력 값에 대한 검증 로직을 구현하여 사전에 정의된 특수 문자들이 입력되지 않도록 조치한다.
+                                        <br>Prepared Statement 구문을 사용하여 개발을 함으로써 입력 값에 들어가는 데이터는 단순히 문자열로 처리되도록 한다.
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr class="bg-white  page-break">
+                                        <td class="px-6 py-2.5 font-medium text-black">
+                                            XSS
+                                        </td>
+                                        <td class="px-6 py-2.5 font-medium text-black">
+                                            웹 서버에서 입력 값에 정의된 문자 길이를 제한 또는 검증하여 클라이언트 측에서 실행될 수 있는 스크립트 명령이 삽입되지 않도록 설정
+                                        <br>HTML 태그의 사용이 불필요한 경우 사용자의 입력 값에서 HTML 특수 문자들을 HTML Entity로 변환하여 스크립트를 일반 문자열로 인식되도록 한다.
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="bg-white  page-break">
+                                            <td class="px-6 py-2.5 font-medium text-black">
+                                                세션고정
+                                            </td>
+                                            <td class="px-6 py-2.5 font-medium text-black">
+                                                로그인할 때마다 예측 불가능한 새로운 세션 ID를 발급하고 기존 세션 ID는 파기한다.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="bg-white  page-break">
+                                            <td class="px-6 py-2.5 font-medium text-black">
+                                                Security Misconfiguration
+                                            </td>
+                                            <td class="px-6 py-2.5 font-medium text-black">
+                                                HTML의 head 태그 내에 META 태그를 추가하여 검색엔진 인덱싱을 차단합니다.
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="bg-white  page-break">
+                                            <td class="px-6 py-2.5 font-medium text-black">
+                                                SSRF
+                                            </td>
+                                            <td class="px-6 py-2.5 font-medium text-black">
+                                                사용자의 입력값을 그대로 사용하지 않고 화이트 리스트 방식이나 블랙 리스트 방식을 통해 입력값 검사를 진행한다.
+                                                <br>요청을 처리하는 서버와 중요 정보가 있는 내부망을 분리한다.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                      </section>
+                    </body>
+                                
+
+    <footer class="bg-gray-300">
+      <div class="container mx-auto">
+        <div class="flex md:flex-row py-6">
+            <div class="flex-1 text-gray-900">
+                <a>분석하기</a>
+              </div>
+              <div class="flex-1 text-gray-900">
+                <a>취약점 정보</a>
+                <ul class="text-xs">
+                  <li class="pl-2px">
+                    <p class="text-gray-500">웹취약점</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex-1 text-gray-900">
+                <a>분석결과</a>
+                <ul class="text-xs ">
+                  <li class="pl-2px">
+                    <p class="text-gray-500">대응방안</p>
+                  </li>
+                </ul>
+              </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

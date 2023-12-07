@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <section class="bg-gray-100 min-h-screen flex justify-center">
+      <div class="min-h-screen w-3/5 flex flex-col items-center mx-auto mt-28">
+        <div class="w-full bg-white rounded-lg sm:max-w-md ">
+          <div class="p-8 space-y-10 md:space-y">
+            <h1 class="text-2xl font-bold leading-tight text-gray-900 dark:text-black">
+              회원가입
+            </h1>
+            <form class="space-y-4 md:space-y" action="login.html"method="post">
+              <div>
+                <input type="text" name="id" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg  block w-full p-3"placeholder="아이디"/>
+              </div>
+              <div>
+                <input type="email"name="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg block w-full p-3"placeholder="이메일"/>
+              </div>
+              <div>
+                <input type="text"name="name"class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg block w-full p-3"placeholder="이름"/>
+              </div>
+              <div>
+                <input type="password"name="pw"class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg block w-full p-3"placeholder="비밀번호"/>
+              </div>
+              <button type="submit"class="w-full text-white bg-blue-500 rounded-lg py-3 text-center">
+                회원 가입
+              </button>
+            </form>
+            <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+              이미 계정이 있으신가요?
+              <a href="login.html"class="font-medium">
+                로그인
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
